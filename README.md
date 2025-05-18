@@ -27,4 +27,21 @@
 ```
     docker build -t bookinfo:v.0.1 .
     docker run -p:8082:8080 -d bookinfo:v0.1
+    docker images | grep bookinfo 
+    
+```
+
+## 镜像打tag 推送
+```
+    docker tag bookinfo:v0.1 harbor.test.com/test/bookinfo:v0.1
+   docker login harbor.test.com -u xxxx -p xxxxx
+   # 拷贝证书到本地目录，否则推送时会报错
+   cp /etc/docker/certs.d/harbor.test.com/ca.crt ~/.docker/
+   docker push harbor.test.com/test/bookinfo:v0.1
+```
+
+## 容器变成镜像
+```
+docker commit 4908f71c1f48 bookinfo:v0.2
+docker run -p:8083:8080 -d bookinfo:v0.2
 ```
