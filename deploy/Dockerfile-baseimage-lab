@@ -1,0 +1,6 @@
+FROM alpine:3.20
+WORKDIR  /
+COPY templates /templates
+COPY static /static
+COPY bk /
+ENTRYPOINT [ "./bk", "serve" ]
