@@ -22,8 +22,9 @@
 - [X] 首页(展示服务间的调用关系)
 - [] 图书详情页
 
-## docker构建
+## docker构建与运行
 
 ```
     docker build -t bookinfo:v.0.1 .
+    docker run -p:8082:8080 -d bookinfo:v0.1
 ```
