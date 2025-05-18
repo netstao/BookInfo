@@ -1,0 +1,12 @@
+
+<html>
+    <head>productpage</head>
+    <body>
+        productpage
+    {{ if ne .User ""}}
+        <div>{{ .User }}</div>
+    {{ else }}
+        <span>login</span>
+    {{ end }}
+    </body>
+</html>
