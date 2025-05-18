@@ -3,4 +3,4 @@ WORKDIR  /
 COPY . .
 RUN go env -w GOPROXY=https://goproxy.cn,direct
 RUN go build -o bk
-ENTRYPOINT [ "./bk", "server" ]
+ENTRYPOINT [ "./bk", "serve" ]
