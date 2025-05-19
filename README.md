@@ -87,8 +87,6 @@ go build -o bk
     ```
     docker build -t bookinfo:network -f deploy/image_buildfast/Dockerfile.network-lab .
     ```
-    - 
-
 ##　构建基础镜像
 - [基础镜像抽离](deploy/image_buildfast/Dockerfile.secondfrom.base) 
     ```
