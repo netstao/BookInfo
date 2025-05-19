@@ -71,4 +71,14 @@ go build -o bk
 ## 构建多阶段编译
 ```
     docker build -t bookinfo:multi-compile-lab -f deploy/Dockerfile.muticompile-lab .
+
+    # 运行容器 --rm 停掉容器后，会自动删除容器
+    docker run --rm --name bookinfo2 -p:8085:8080 -d bookinfo:multi-compile-lab
+    #停止容器
+    docker stop bookinfo2
+
 ```
+
+## 安装最少依赖 删除中间缓存
+[最少依赖](deplpy/Dockerfile.reducedep-lab)
+[删除中间层](deplpy/Dockerfile.reducelayers-lab)
