@@ -10,7 +10,7 @@ FROM alpine:3.21
 #     && apt clean \
 #     && rm -rf /var/lib/apt/lists/* 
 #严格执行 set -eux
-RUN set -eux && sed -i 's/dl-cnd.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+RUN set -eux && sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 RUN apk --update --no-cache add curl
 WORKDIR  /
 COPY templates /templates
