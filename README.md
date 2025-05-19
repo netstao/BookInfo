@@ -81,7 +81,7 @@ go build -o bk
 
 ## 安装最少依赖 删除中间缓存
 - [最少依赖](deploy/image_compress/Dockerfile.reducedep-lab)
-- [删除中间层](deploy/image_compress/Dockerfile.reducelayers-lab)
+- [删除中间层](deploy/image_compress/Dockerfile.reducelayer-lab)
 - [替换国内源](deploy/image_buildfast/Dockerfile.network-lab)
     - 构建
     ```
