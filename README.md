@@ -70,5 +70,5 @@ go build -o bk
 
 ## 构建多阶段编译
 ```
-    docker build -t bookinfo:multi-compile-lab -f deploy/Dockerfile-multi-compile .
+    docker build -t bookinfo:multi-compile-lab -f deploy/Dockerfile.muticompile-lab .
 ```
