@@ -80,9 +80,9 @@ go build -o bk
 ```
 
 ## 安装最少依赖 删除中间缓存
-- [最少依赖](deplpy/image_compress/Dockerfile.reducedep-lab)
-- [删除中间层](deplpy/image_compress/Dockerfile.reducelayers-lab)
-- [替换国内源](deplpy/image_buildfast/Dockerfile.network-lab)
+- [最少依赖](deploy/image_compress/Dockerfile.reducedep-lab)
+- [删除中间层](deploy/image_compress/Dockerfile.reducelayers-lab)
+- [替换国内源](deploy/image_buildfast/Dockerfile.network-lab)
     - 构建
     ```
     docker build -t bookinfo:network -f deploy/image_buildfast/Dockerfile.network-lab .
@@ -90,7 +90,7 @@ go build -o bk
     - 
 
 ##　构建基础镜像
-- [基础镜像抽离](deplpy/image_buildfast/Dockerfile.secondfrom.base) 
+- [基础镜像抽离](deploy/image_buildfast/Dockerfile.secondfrom.base) 
     ```
     docker build -t alpine:3.21-bookinfo-base -f  deploy/image_buildfast/Dockerfile.secondfrom.base .
     ```
