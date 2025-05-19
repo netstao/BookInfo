@@ -45,3 +45,30 @@
 docker commit 4908f71c1f48 bookinfo:v0.2
 docker run -p:8083:8080 -d bookinfo:v0.2
 ```
+
+## 1.24.3-alpine3.21容器编译 
+
+```
+cd /root/work/BookInfo
+# 指定容器编译
+docker run -v ./:/server --rm -itd --name compile golang:1.24.3-alpine3.21
+docker exec -it compile /bin/sh
+go env -w GOPROXY=https://goproxy.cn,direct
+go build -o bk
+```
+
+## alpine:3.21
+- 最小容器运行
+```
+    docker build -t bookinfo:base-image-lab -f deploy/Dockerfile-baseimage-lab .
+    docker images | grep lab
+    docker tag bookinfo:base-image-lab harbor.test.com/test/bookinfo:base-image-lab
+    docker push harbor.test.com/test/bookinfo:base-image-lab
+    # 运行容器 --rm 停掉容器后，会自动删除容器
+    docker run --rm --name bookinfo  -p:8084:8080 -d harbor.test.com/test/bookinfo:base-image-lab
+```
+
+## 构建多阶段编译
+```
+    docker build -t bookinfo:multi-compile-lab -f deploy/Dockerfile-multi-compile .
+```
