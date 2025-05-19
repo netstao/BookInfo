@@ -1,0 +1,3 @@
+FROM alpine:3.21
+RUN set -eux && sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+RUN apk --update --no-cache add curl
